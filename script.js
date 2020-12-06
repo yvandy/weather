@@ -5,7 +5,7 @@ $(document).ready(function(){
 
         $.ajax({
 
-            url:`http://api.openweathermap.org/data/2.5/weather?q=${cityname}&appid=${APIKey}&units=metric`
+            url:`https://api.openweathermap.org/data/2.5/weather?q=${cityname}&appid=${APIKey}&units=metric`
             
         }).done(function(weatherdata){
 
@@ -15,7 +15,7 @@ $(document).ready(function(){
             <div class="container">
                 <div class="row">
                     <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="http://openweathermap.org/img/wn/${weatherdata.weather[0].icon}@2x.png" alt="Card image cap">
+                        <img class="card-img-top" src="https://openweathermap.org/img/wn/${weatherdata.weather[0].icon}@2x.png" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title">${weatherdata.weather[0].description}</h5>
                             <p class="card-text">The temprature at ${cityname} is = ${weatherdata.main.temp} &#8451; and it feels like it is${weatherdata.main.feels_like} $</p>
